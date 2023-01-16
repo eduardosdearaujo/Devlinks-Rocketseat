@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --bg-img: url(./assets/Mobile/bg-dark-mobile.png);
+  --text-border-01: #ccc;
+  --text-border-02: white;
+  --bg-box-01: rgba(100, 100, 100, 0.1);
+  --bg-box-02: rgba(100, 100, 100, 0.3);
+}
+/* Estilo Light */
+body.light {
+  --bg-img: url(./assets/Mobile/bg-light-mobile.png);
+  --text-border-01: #444;
+  --text-border-02: black;
+  --bg-box-01: rgba(100, 100, 100, 0.05);
+  --bg-box-02: rgba(100, 100, 100, 0.1);
+}
+
+body {
+  background: var(--bg-img) no-repeat top center/cover;
+  font-family: "Inter", sans-serif;
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  color: var(--text-border-02);
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.links a {
+  display: block;
+  width: 350px;
+  text-align: center;
+  padding: 20px 40px;
+  border: 1px solid var(--text-border-01);
+  border-radius: 10px;
+  background-color: var(--bg-box-01);
+  color: var(--text-border-01);
+  transition: all 0.2s ease-in-out;
+}
+
+.links a:hover {
+  color: var(--text-border-02);
+  border: 2px solid var(--text-border-02);
+  background-color: var(--bg-box-02);
+  padding: 19px 40px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+.redes a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.redes a ion-icon {
+  color: var(--text-border-02);
+  font-size: 24px;
+}
+
+.redes a:hover {
+  background-color: var(--bg-box-02);
+}
+
+.assinatura {
+  color: var(--text-border-02);
+  text-align: center;
+}
+
+/* theme switcher */
+
+#theme-switch {
+  /*  border: 1px solid red; */
+  padding: 10px 0;
+  width: 100px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+span.bar {
+  background-color: var(--bg-box-02);
+  border: 1px solid var(--text-border-02);
+  border-radius: 10px;
+  width: 100px;
+  height: 20px;
+  display: block;
+}
+
+button#switch {
+  border: 2px solid var(--text-border-02);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.2s ease-in-out;
+}
+
+.light #switch {
+  left: 60px;
+}
